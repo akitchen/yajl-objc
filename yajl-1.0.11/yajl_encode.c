@@ -55,7 +55,7 @@ void
 yajl_string_encode2(const yajl_print_t print,
                     void * ctx,
                     const unsigned char * str,
-                    unsigned int len)
+                    size_t len)
 {
     unsigned int beg = 0;
     unsigned int end = 0;    

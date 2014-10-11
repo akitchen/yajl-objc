@@ -168,7 +168,7 @@ static opts_t defaults(NSDictionary *x)
     if( x->indent ) [json appendString: open];
     x->depth++;
 #if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5
-    unsigned n = [self count];
+    NSUInteger n = [self count];
     for (int i = 0; i < n; i++) {
         id item = [self objectAtIndex:i];
 #else
@@ -219,7 +219,7 @@ static opts_t defaults(NSDictionary *x)
     x->depth++;
     NSArray *keys = [[self allKeys] sortedArrayUsingSelector:@selector(compare:)];
 #if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5
-    unsigned n = [keys count];
+    NSUInteger n = [keys count];
     for (int i = 0; i < n; i++) {
         NSString *key = [keys objectAtIndex:i];
 #else

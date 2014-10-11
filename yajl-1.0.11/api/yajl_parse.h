@@ -37,6 +37,8 @@
 
 #include "yajl_common.h"
 
+#include <stdlib.h>
+
 #ifndef __YAJL_PARSE_H__
 #define __YAJL_PARSE_H__
 
@@ -142,7 +144,7 @@ extern "C" {
      */
     YAJL_API yajl_status yajl_parse(yajl_handle hand,
                                     const unsigned char * jsonText,
-                                    unsigned int jsonTextLength);
+                                    size_t jsonTextLength);
 
     /** Parse any remaining buffered json.
      *  Since yajl is a stream-based parser, without an explicit end of
@@ -167,7 +169,7 @@ extern "C" {
      */
     YAJL_API unsigned char * yajl_get_error(yajl_handle hand, int verbose,
                                             const unsigned char * jsonText,
-                                            unsigned int jsonTextLength);
+                                            size_t jsonTextLength);
 
     /**
      * get the amount of data consumed from the last chunk passed to YAJL.

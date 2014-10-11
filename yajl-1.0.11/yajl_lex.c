@@ -206,7 +206,7 @@ static const char charLookupTable[256] =
 
 static yajl_tok
 yajl_lex_utf8_char(yajl_lexer lexer, const unsigned char * jsonText,
-                   unsigned int jsonTextLen, unsigned int * offset,
+                   size_t jsonTextLen, unsigned int * offset,
                    unsigned char curChar)
 {
     if (curChar <= 0x7f) {
@@ -262,7 +262,7 @@ if (*offset >= jsonTextLen) { \
 
 static yajl_tok
 yajl_lex_string(yajl_lexer lexer, const unsigned char * jsonText,
-                unsigned int jsonTextLen, unsigned int * offset)
+                size_t jsonTextLen, unsigned int * offset)
 {
     yajl_tok tok = yajl_tok_error;
     int hasEscapes = 0;
@@ -343,7 +343,7 @@ yajl_lex_string(yajl_lexer lexer, const unsigned char * jsonText,
 
 static yajl_tok
 yajl_lex_number(yajl_lexer lexer, const unsigned char * jsonText,
-                unsigned int jsonTextLen, unsigned int * offset)
+                size_t jsonTextLen, unsigned int * offset)
 {
     /** XXX: numbers are the only entities in json that we must lex
      *       _beyond_ in order to know that they are complete.  There
@@ -430,7 +430,7 @@ yajl_lex_number(yajl_lexer lexer, const unsigned char * jsonText,
 
 static yajl_tok
 yajl_lex_comment(yajl_lexer lexer, const unsigned char * jsonText,
-                 unsigned int jsonTextLen, unsigned int * offset)
+                 size_t jsonTextLen, unsigned int * offset)
 {
     unsigned char c;
 
@@ -471,7 +471,7 @@ yajl_lex_comment(yajl_lexer lexer, const unsigned char * jsonText,
 
 yajl_tok
 yajl_lex_lex(yajl_lexer lexer, const unsigned char * jsonText,
-             unsigned int jsonTextLen, unsigned int * offset,
+             size_t jsonTextLen, unsigned int * offset,
              const unsigned char ** outBuf, unsigned int * outLen)
 {
     yajl_tok tok = yajl_tok_error;

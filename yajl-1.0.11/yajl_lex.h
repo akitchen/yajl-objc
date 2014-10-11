@@ -92,7 +92,7 @@ n * error messages.
  * size to get adequate performance.
  */
 yajl_tok yajl_lex_lex(yajl_lexer lexer, const unsigned char * jsonText,
-                      unsigned int jsonTextLen, unsigned int * offset,
+                      size_t jsonTextLen, unsigned int * offset,
                       const unsigned char ** outBuf, unsigned int * outLen);
 
 /** have a peek at the next token, but don't move the lexer forward */

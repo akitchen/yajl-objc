@@ -72,11 +72,11 @@ struct yajl_handle_t {
 
 yajl_status
 yajl_do_parse(yajl_handle handle, const unsigned char * jsonText,
-              unsigned int jsonTextLen);
+              size_t jsonTextLen);
 
 unsigned char *
 yajl_render_error_string(yajl_handle hand, const unsigned char * jsonText,
-                         unsigned int jsonTextLen, int verbose);
+                         size_t jsonTextLen, int verbose);
 
 
 #endif

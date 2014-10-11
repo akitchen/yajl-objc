@@ -115,7 +115,7 @@ yajl_free(yajl_handle handle)
 
 yajl_status
 yajl_parse(yajl_handle hand, const unsigned char * jsonText,
-           unsigned int jsonTextLen)
+           size_t jsonTextLen)
 {
     yajl_status status;
     status = yajl_do_parse(hand, jsonText, jsonTextLen);
@@ -136,7 +136,7 @@ yajl_parse_complete(yajl_handle hand)
 
 unsigned char *
 yajl_get_error(yajl_handle hand, int verbose,
-               const unsigned char * jsonText, unsigned int jsonTextLen)
+               const unsigned char * jsonText, size_t jsonTextLen)
 {
     return yajl_render_error_string(hand, jsonText, jsonTextLen, verbose);
 }

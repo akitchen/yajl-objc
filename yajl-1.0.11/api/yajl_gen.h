@@ -37,6 +37,8 @@
 
 #include "yajl_common.h"
 
+#include <stdlib.h>
+
 #ifndef __YAJL_GEN_H__
 #define __YAJL_GEN_H__
 
@@ -72,7 +74,7 @@ extern "C" {
     /** a callback used for "printing" the results. */
     typedef void (*yajl_print_t)(void * ctx,
                                  const char * str,
-                                 unsigned int len);
+                                 size_t len);
 
     /** configuration structure for the generator */
     typedef struct {
@@ -129,10 +131,10 @@ extern "C" {
     YAJL_API yajl_gen_status yajl_gen_double(yajl_gen hand, double number);
     YAJL_API yajl_gen_status yajl_gen_number(yajl_gen hand,
                                              const char * num,
-                                             unsigned int len);
+                                             size_t len);
     YAJL_API yajl_gen_status yajl_gen_string(yajl_gen hand,
                                              const unsigned char * str,
-                                             unsigned int len);
+                                             size_t len);
     YAJL_API yajl_gen_status yajl_gen_null(yajl_gen hand);
     YAJL_API yajl_gen_status yajl_gen_bool(yajl_gen hand, int boolean);    
     YAJL_API yajl_gen_status yajl_gen_map_open(yajl_gen hand);
