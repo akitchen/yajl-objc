@@ -94,7 +94,19 @@
 		00C3CEEA126EABFF00DF710D /* yajl_parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C3CEE6126EABFF00DF710D /* yajl_parse.h */; };
 		00C3CEEB126EABFF00DF710D /* yajl_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 00C3CEE7126EABFF00DF710D /* yajl_version.h */; };
 		00C3CEFC126EAC5700DF710D /* twitter_snowflake.json in Resources */ = {isa = PBXBuildFile; fileRef = 00C3CEFB126EAC5700DF710D /* twitter_snowflake.json */; };
+		AE05766419EA065E000793DE /* libYAJLiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0065977C11BEEF4000E89ABD /* libYAJLiOS.a */; };
+		AE05766619EA067B000793DE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE05766519EA067B000793DE /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE05766219EA065A000793DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0065975811BEEF4000E89ABD;
+			remoteInfo = YAJLiOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00073FB31161433500D8283B /* YAJLDocumentDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAJLDocumentDelegateTest.m; sourceTree = "<group>"; };
@@ -190,6 +202,7 @@
 		00C406470FE77C51003CE908 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		AA747D9E0F9514B9006C5449 /* YAJLiOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJLiOS_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AE05766519EA067B000793DE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE05766419EA065E000793DE /* libYAJLiOS.a in Frameworks */,
 				005886AB1226333300292C90 /* CoreGraphics.framework in Frameworks */,
 				005886B21226334500292C90 /* UIKit.framework in Frameworks */,
 				005886C81226337500292C90 /* Foundation.framework in Frameworks */,
@@ -417,6 +431,7 @@
 				00C405FF0FE77A81003CE908 /* Scripts */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				AE05766519EA067B000793DE /* Default-568h@2x.png */,
 				00C4054F0FE77760003CE908 /* Tests-Info.plist */,
 				005886AA1226333300292C90 /* CoreGraphics.framework */,
 				005886B11226334500292C90 /* UIKit.framework */,
@@ -503,6 +518,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AE05766319EA065A000793DE /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = Tests;
@@ -549,6 +565,7 @@
 				006597B611BEEF5400E89ABD /* example.json in Resources */,
 				006597B711BEEF5400E89ABD /* sample.json in Resources */,
 				006597B811BEEF5400E89ABD /* overflow.json in Resources */,
+				AE05766619EA067B000793DE /* Default-568h@2x.png in Resources */,
 				006597B911BEEF5400E89ABD /* stream1.json in Resources */,
 				006597BA11BEEF5400E89ABD /* stream2.json in Resources */,
 				006597BB11BEEF5400E89ABD /* gen_expected1.json in Resources */,
@@ -644,6 +661,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE05766319EA065A000793DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0065975811BEEF4000E89ABD /* YAJLiOS */;
+			targetProxy = AE05766219EA065A000793DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		005887361226360800292C90 /* Debug */ = {
