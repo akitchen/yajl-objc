@@ -15,7 +15,7 @@
 
 #define kPerfTestCount 200
 
-- (void)_testYAJLParser {
+- (void)testYAJLParser {
   NSString *examplePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"json"];
   NSData *data = [[NSData dataWithContentsOfFile:examplePath options:NSUncachedRead error:nil] retain]; 
   
@@ -32,7 +32,7 @@
   [data release];
 }
 
-- (void)_testSBJSON {
+- (void)testSBJSON {
   NSString *examplePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"json"];
   NSData *testData = [NSData dataWithContentsOfFile:examplePath options:NSUncachedRead error:nil];
   NSString *testString = [[NSString alloc] initWithData:testData encoding:NSUTF8StringEncoding];
@@ -49,6 +49,21 @@
   
   [testString release];
   
+}
+
+- (void)testNSJSONSerialization {
+    NSString *examplePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"json"];
+    NSData *testData = [NSData dataWithContentsOfFile:examplePath options:NSUncachedRead error:nil];
+
+    NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+    for(NSInteger i = 0; i < kPerfTestCount; i++) {
+        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+        id value = [NSJSONSerialization JSONObjectWithData:testData options:0 error:NULL];
+        if (!value) GHFail(@"No result");
+        [pool release];
+    }
+    NSTimeInterval took = [NSDate timeIntervalSinceReferenceDate] - start;
+    GHTestLog(@"Took %0.4f", took);
 }
 
 @end
