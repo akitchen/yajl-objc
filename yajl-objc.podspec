@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://lloyd.github.com/yajl"
   s.license      = 'MIT'
   s.author       = { "Gabriel Handford" => "gabrielh@gmail.com" }
-  s.source       = { :git => "https://github.com/a2/yajl-objc.git", :branch => "master" }
+  s.source       = { :git => "https://github.com/akitchen/yajl-objc.git", :branch => "master" }
   s.source_files = 'Classes/*.{h,m}', 'Libraries/{GHKit,GTM}/*.{h,m}'
   s.dependency     'yajl', '~>1.0.11'
 end
